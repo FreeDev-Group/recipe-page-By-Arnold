@@ -205,3 +205,31 @@ section{
 }
   
 }
+@media screen and (max-width:500px) {
+  main{
+  padding: 0;
+}
+
+section{
+  background-color: var(--color-bg);
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+.all{
+  margin:auto;
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+  margin:0;
+  height: auto;
+  width: 100%;
+}
+
+  
+}
+  
+
+
