@@ -227,7 +227,23 @@ img {
   height: auto;
   width: 100%;
 }
-
+section{
+  background-color: var(--color-bg);
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  border-radius: 0;
+}
+.all{
+  margin:auto;
+  height: auto;
+  max-width: 100%;
+  padding: 25px;
+}
+.picture {
+  overflow: hidden;
+  border-radius: 0;
+}
   
 }
   
