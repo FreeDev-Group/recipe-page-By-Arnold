@@ -1,33 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+/* ---------- Reset / Box-sizing ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* ---------- Root variables (theme) ---------- */
+:root {
+  /* spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* typography */
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-size-base: 16px;
+  --line-height-body: 1.6;
+
+  /* colors */
+  --color-bg: #ffffff;
+  --color-surface: #fff8f2;
+  --color-text: #222222;
+  --color-muted: #666666;
+  --color-primary: #852912;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+
+  /* layout */
+  --max-width: 1100px;
+  --border-radius: 1rem;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background: var(--color-surface);
   min-height: 100vh;
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-/* =========================
-   Colors
-   ========================= */
-:root {
-  --primary-color: #852912;
-  --secondary-color: #f1f1f1; 
-  --text-color: #333333;
-  --heading-color: #111111;
-  --border-color: #e0e0e0;
-  --background-color: #ffffff;
+  display: flex;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  color: var(--primary-color);
-  font-weight: bold;
+/* centered page wrapper */
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
 }
+
+/* grid helper for two-column recipe layout */
+.recipe-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+
+
